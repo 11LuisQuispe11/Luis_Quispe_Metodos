@@ -1,0 +1,53 @@
+study_period:
+  start_date: "2024-01-01"
+  end_date: "2026-06-17"
+
+blast_inventory:
+  2024:
+    blasts: 1070
+    holes: 154821
+    min_holes_per_blast: 1
+    max_holes_per_blast: 907
+    mean_holes_per_blast: 144.692523
+    median_holes_per_blast: 112
+  2025:
+    blasts: 1039
+    holes: 180018
+    min_holes_per_blast: 4
+    max_holes_per_blast: 1297
+    mean_holes_per_blast: 173.260827
+    median_holes_per_blast: 140
+  2026:
+    blasts: 516
+    holes: 77704
+    min_holes_per_blast: 4
+    max_holes_per_blast: 779
+    mean_holes_per_blast: 150.589147
+    median_holes_per_blast: 123
+
+total:
+  blasts: 2625
+  holes: 412543
+  weighted_mean_holes_per_blast: 157.16
+
+traceability_design:
+  blast_identifier: "blast_name"
+  truck_identifier: "LOADID"
+  dump_identifier: "DUMPID"
+  crusher_power_tags:
+    - "Chancadora 01 - KW"
+    - "Chancadora 02 - KW"
+  selected_primary_scope: "one primary crusher for the initial confirmatory analysis"
+  truck_payload_range_tonnes: [300, 400]
+  origin_scope: "direct polygon-to-crusher truck cycles"
+  excluded_primary_cases:
+    - "stockpile-origin material"
+    - "ambiguous mixtures"
+    - "missing dumping timestamp"
+    - "invalid payload"
+    - "missing crusher-power coverage"
+
+data_access:
+  raw_data_available: false
+  reason: "Access to the operational database is no longer available."
+  research_use: "Aggregated, anonymous and non-identifying academic use only."

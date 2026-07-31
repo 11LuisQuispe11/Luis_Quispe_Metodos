@@ -52,7 +52,7 @@ Pilot search date: 13 June 2026. Main discovery source: Semantic Scholar. Supple
 
 # 4. PRISMA 2020 flow
 
-<img src="assets/protocol/media/image1.png" style="width:6.6in;height:8.36in" />
+![PRISMA 2020 Flow Diagram - Pilot Domain Search](../assets/prisma_2020_flow_pilot_domain_search.png)
 
 *Figure 1. Identification, screening, eligibility, and inclusion for the pilot domain search. The four methodological foundations are reported separately and do not inflate the six-study PRISMA inclusion count.*
 
