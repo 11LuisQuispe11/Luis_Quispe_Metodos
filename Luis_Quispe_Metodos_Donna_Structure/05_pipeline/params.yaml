@@ -1,0 +1,38 @@
+project:
+  name: synthetic_primary_crusher_energy_pipeline
+  scientific_status: synthetic demonstration only
+data:
+  seed: 42
+  study_end: '2026-06-17'
+  years:
+    2024:
+      blasts: 1070
+      holes: 154821
+      min: 1
+      max: 907
+      median: 112
+    2025:
+      blasts: 1039
+      holes: 180018
+      min: 4
+      max: 1297
+      median: 140
+    2026:
+      blasts: 516
+      holes: 77704
+      min: 4
+      max: 779
+      median: 123
+split:
+  train_years:
+  - 2024
+  - 2025
+  test_years:
+  - 2026
+model:
+  name: HistGradientBoostingRegressor
+  learning_rate: 0.06
+  max_iter: 250
+  max_leaf_nodes: 31
+  l2_regularization: 0.5
+  random_state: 42

@@ -1,0 +1,33 @@
+stages:
+  generate:
+    cmd: python src/generate_data.py --config params.yaml
+    deps:
+      - src/generate_data.py
+      - params.yaml
+    outs:
+      - data/processed/synthetic_blast_crusher.csv
+
+  train:
+    cmd: python src/train.py --config params.yaml
+    deps:
+      - src/train.py
+      - params.yaml
+      - data/processed/synthetic_blast_crusher.csv
+    outs:
+      - results/model.joblib
+      - results/predictions.csv
+      - results/model_comparison.csv
+    metrics:
+      - results/metrics.json:
+          cache: false
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - results/predictions.csv
+      - results/metrics.json
+    outs:
+      - results/temporal_holdout_chart.png
+      - results/result_summary.md:
+          cache: false

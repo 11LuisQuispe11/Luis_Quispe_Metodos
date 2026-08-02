@@ -1,0 +1,6 @@
+metric,before,after
+Accuracy,0.664,0.653
+Disparate impact,0.773,0.975
+Statistical parity difference,-0.165,-0.016
+Equal opportunity difference,-0.095,0.031
+Average odds difference,-0.139,0.015

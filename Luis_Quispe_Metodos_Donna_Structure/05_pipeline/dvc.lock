@@ -1,0 +1,74 @@
+schema: '2.0'
+stages:
+  generate:
+    cmd: python src/generate_data.py --config params.yaml
+    deps:
+    - path: src/generate_data.py
+      hash: md5
+      md5: b7ca670dee344213e84e3ffc05bd8ad2
+      size: 3979
+    - path: params.yaml
+      hash: md5
+      md5: f250f85ac379b7a9b9f8f9c1a0962c6f
+      size: 656
+    outs:
+    - path: data/processed/synthetic_blast_crusher.csv
+      hash: md5
+      md5: 252b688fb95942ddd0d0acefa49966f5
+      size: 644813
+  train:
+    cmd: python src/train.py --config params.yaml
+    deps:
+    - path: src/train.py
+      hash: md5
+      md5: 7a107d639167f16e1bdde98e0c5149bf
+      size: 4326
+    - path: params.yaml
+      hash: md5
+      md5: f250f85ac379b7a9b9f8f9c1a0962c6f
+      size: 656
+    - path: data/processed/synthetic_blast_crusher.csv
+      hash: md5
+      md5: 252b688fb95942ddd0d0acefa49966f5
+      size: 644813
+    outs:
+    - path: results/model.joblib
+      hash: md5
+      md5: 478d6ae5c555860ec6846aa461690b25
+      size: 925874
+    - path: results/predictions.csv
+      hash: md5
+      md5: 14c1e5b42a998e77f754cdfbf7417986
+      size: 73313
+    - path: results/model_comparison.csv
+      hash: md5
+      md5: f7199323924bc6ebaa951cef8c661732
+      size: 246
+    - path: results/metrics.json
+      hash: md5
+      md5: 03b34148ff63062089452de68371dd3c
+      size: 623
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: src/evaluate.py
+      hash: md5
+      md5: c4372f8b1c560533e671b3266c90cbb5
+      size: 2599
+    - path: results/predictions.csv
+      hash: md5
+      md5: 14c1e5b42a998e77f754cdfbf7417986
+      size: 73313
+    - path: results/metrics.json
+      hash: md5
+      md5: 03b34148ff63062089452de68371dd3c
+      size: 623
+    outs:
+    - path: results/temporal_holdout_chart.png
+      hash: md5
+      md5: 523fad93c4fc8eb2059f109ac8e77106
+      size: 223966
+    - path: results/result_summary.md
+      hash: md5
+      md5: 52b2016c010fcb51ea175cf41ce93cf8
+      size: 696
