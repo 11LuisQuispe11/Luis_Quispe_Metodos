@@ -1,0 +1,21 @@
+{
+  "dataset_path": "E:\\Luis\\Luis_Quispe_Metodos\\research-methods-deliverables\\05_pipeline\\data\\processed\\blast_crusher.csv",
+  "rows": 2625,
+  "columns": 17,
+  "date_min": "2024-01-01 00:00:00",
+  "date_max": "2026-06-17 00:00:00",
+  "schema": {
+    "required_columns": 17,
+    "present_columns": 17,
+    "missing_columns": [],
+    "unexpected_columns": [],
+    "schema_pass": true
+  },
+  "duplicate_blasts": 0,
+  "invalid_dates": 0,
+  "nonpositive_throughput": 0,
+  "nonpositive_average_power": 0,
+  "data_status_counts": {
+    "SYNTHETIC": 2625
+  }
+}

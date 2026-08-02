@@ -1,0 +1,29 @@
+{
+  "dataset_path": "E:\\Luis\\Luis_Quispe_Metodos\\research-methods-deliverables\\05_pipeline\\data\\processed\\blast_crusher.csv",
+  "rows": 2625,
+  "train_rows": 2109,
+  "test_rows": 516,
+  "train_years": [
+    2024,
+    2025
+  ],
+  "test_years": [
+    2026
+  ],
+  "primary_target": "average_power_kw",
+  "best_model_by_mape": "Linear regression",
+  "best_model_metrics": {
+    "target": "average_power_kw",
+    "model": "Linear regression",
+    "MAE": 106.0038617858062,
+    "RMSE": 135.66813429595183,
+    "MAPE_pct": 3.9347838663736883,
+    "WAPE_pct": 3.8687540900967634,
+    "R2": 0.857330918260139
+  },
+  "probabilistic_coverage_pct": 75.1937984496124,
+  "probabilistic_mean_interval_width_kw": 336.48724945028374,
+  "data_status_counts": {
+    "SYNTHETIC": 2625
+  }
+}

@@ -5,14 +5,14 @@ stages:
       - src/generate_data.py
       - params.yaml
     outs:
-      - data/processed/synthetic_blast_crusher.csv
+      - data/processed/blast_crusher.csv
 
   train:
     cmd: python src/train.py --config params.yaml
     deps:
       - src/train.py
       - params.yaml
-      - data/processed/synthetic_blast_crusher.csv
+      - data/processed/blast_crusher.csv
     outs:
       - results/model.joblib
       - results/predictions.csv

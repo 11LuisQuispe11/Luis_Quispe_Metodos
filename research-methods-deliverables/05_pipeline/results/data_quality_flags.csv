@@ -1,0 +1,5 @@
+check,count,pass
+Duplicate blast_name,0,True
+Invalid firing_datetime,0,True
+Non-positive throughput_tph,0,True
+Non-positive average_power_kw,0,True
